@@ -5,19 +5,15 @@
    win32-ipc 0.5.0 or later
 
 == Installation
-=== Gem Installation
    gem install win32-mutex
-=== Local Installation
-   rake test (optional)
-   rake install
 
 == Synopsis
    require 'win32/mutex'
 
    # Do not leave out the 'Win32::', otherwise you're using Ruby's Mutex class.
    Win32::Mutex.new(false, 'test') do |m|
-      # Do stuff
-      m.release
+     # Do stuff
+     m.release
    end
 
 == Documentation
@@ -29,21 +25,21 @@
 
 == Notes
    The Mutex class is a subclass of Win32::Ipc (win32-ipc). This library
-   require's the win32-ipc library internally (you don't need to explicitly
-   call it).
+   require's the win32-ipc library internally. You don't need to explicitly
+   call it.
 
 == Acknowledgements
    Originally adapted from the Win32::Mutex Perl module.
 
 == Known Bugs  
-   None that I know of. Please log any other bug reports on the RubyForge
-   project page at http://www.rubyforge.net/projects/win32utils
+   None that I know of. Please log any other bug reports on the
+   project page at https://github.com/djberg96/win32-mutex.
     
 == License
    Artistic 2.0
     
 == Copyright
-   (C) 2003-2009 Daniel J. Berger, All Rights Reserved
+   (C) 2003-2012 Daniel J. Berger, All Rights Reserved
     
 == Warranty
    This package is provided "as is" and without any express or

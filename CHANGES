@@ -1,3 +1,7 @@
+== 0.3.2 - 18-Mar-2011
+* Updates to the Rakefile and gemspec.
+* One test file change for Ruby 1.9.
+
 == 0.3.1 - 8-Aug-2009
 * Changed license to Artistic 2.0.
 * Updated the gemspec, including addition of license and description update.
