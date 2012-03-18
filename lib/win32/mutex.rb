@@ -2,20 +2,20 @@ require 'win32/ipc'
 
 # The Win32 module serves as a namespace only.
 module Win32
-   
+
    # The Mutex class encapsulates Windows mutex objects.
    class Mutex < Ipc
-   
+
       # This is the error raised if any of the Mutex methods fail.
       class Error < StandardError; end
-   
+
       extend Windows::Synchronize
       extend Windows::Error
       extend Windows::Handle
-      
+
       # The version of the win32-mutex library
-      VERSION = '0.3.1'
-      
+      VERSION = '0.3.2'
+
       # The name of the mutex object.
       attr_reader :name
 
@@ -38,12 +38,12 @@ module Win32
          @initial_owner = initial_owner
          @name          = name
          @inherit       = inherit
-         
+
          # Used to prevent potential segfaults.
          if name && !name.is_a?(String)
             raise TypeError, 'name must be a string'
          end
-         
+
          if inherit
             sec = 0.chr * 12 # sizeof(SECURITY_ATTRIBUTES)
             sec[0,4] = [12].pack('L')
@@ -51,17 +51,17 @@ module Win32
          else
             sec = 0
          end
-         
+
          initial = initial_owner ? 1 : 0
-         
+
          handle = CreateMutex(sec, initial, name)
-         
+
          if handle == 0 || handle == INVALID_HANDLE_VALUE
             raise Error, get_last_error
          end
- 
+
          super(handle)
-         
+
          if block_given?
             begin
                yield self
@@ -87,7 +87,7 @@ module Win32
          if name && !name.is_a?(String)
             raise TypeError, 'name must be a string'
          end
-         
+
          bool = inherit ? 1 : 0
 
          # The OpenMutex() call here is strictly to force an error if the user
@@ -109,17 +109,17 @@ module Win32
       #
       def release
          unless ReleaseMutex(@handle)
-            raise Error, get_last_error   
+            raise Error, get_last_error
          end
       end
-      
+
       # Returns whether or not the calling thread has initial ownership of
       # the mutex object.
       #
       def initial_owner?
          @initial_owner
       end
-      
+
       # Returns whether or not the object was opened such that a process
       # created by the CreateProcess() function (a Windows API function) can
       # inherit the handle. The default is true.
