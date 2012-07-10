@@ -1,6 +1,8 @@
 == 0.4.0 - 10-Jul-2012
 * Converted to FFI.
 * Now requires Ruby 1.9 or later.
+* Removed the Error class. If a Windows function fails it raises the
+  appropriate SystemCallError (Errno::).
 
 == 0.3.2 - 18-Mar-2011
 * Updates to the Rakefile and gemspec.
