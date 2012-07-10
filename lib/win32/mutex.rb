@@ -60,7 +60,7 @@ module Win32
         sec = nil
       end
 
-      unless name.encoding.to_s == 'UTF-16LE'
+      if name && name.encoding.to_s != 'UTF-16LE'
         name = name + 0.chr
         name.encode!('UTF-16LE')
       end
