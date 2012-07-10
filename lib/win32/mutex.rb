@@ -21,6 +21,8 @@ module Win32
     attach_function :OpenMutexW, [:ulong, :bool, :buffer_in], :ulong
     attach_function :ReleaseMutex, [:ulong], :bool
 
+    private_class_method :CreateMutexW, :OpenMutexW, :ReleaseMutex
+
     INVALID_HANDLE_VALUE = 0xFFFFFFFF
     MUTEX_ALL_ACCESS     = 0x1F0001
 
