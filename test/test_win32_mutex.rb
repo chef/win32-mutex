@@ -1,14 +1,11 @@
 # encoding: utf-8
 #######################################################################
-# test_Win32::Mutex.rb
+# test_win32_mutex.rb
 #
-# Test suite for the win32-Win32::Mutex package. This test suite
-# should be run via the 'rake test' task.
+# Test suite for the win32-mutex library. This test suite should be
+# run via the 'rake test' task.
 #######################################################################
-require 'rubygems'
-gem 'test-unit'
-
-require 'test/unit'
+require 'test-unit'
 require 'win32/mutex'
 
 class TC_Win32_Mutex < Test::Unit::TestCase
@@ -18,7 +15,7 @@ class TC_Win32_Mutex < Test::Unit::TestCase
   end
 
   def test_version
-    assert_equal('0.3.2', Win32::Mutex::VERSION)
+    assert_equal('0.4.0', Win32::Mutex::VERSION)
   end
 
   def test_open
@@ -28,7 +25,7 @@ class TC_Win32_Mutex < Test::Unit::TestCase
   end
 
   def test_open_expected_errors
-    assert_raise(Win32::Mutex::Error){ Win32::Mutex.open('bogus'){} }
+    assert_raise(Errno::ENOENT){ Win32::Mutex.open('bogus'){} }
   end
 
   def test_release

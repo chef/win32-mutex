@@ -2,7 +2,7 @@
    Interface for Mutexes on MS Windows.
 
 == Prerequisites
-   win32-ipc 0.5.0 or later
+   win32-ipc 0.6.0 or later
 
 == Installation
    gem install win32-mutex

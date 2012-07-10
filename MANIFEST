@@ -5,4 +5,4 @@
 * win32-mutex.gemspec
 * examples/mutex_test.rb
 * lib/win32/mutex.rb
-* test/tc_mutex.rb
+* test/test_win32_mutex.rb
