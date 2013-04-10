@@ -14,8 +14,8 @@ class TC_Win32_Mutex < Test::Unit::TestCase
     @umutex = Win32::Mutex.new(false, 'Ηελλας')
   end
 
-  def test_version
-    assert_equal('0.4.0', Win32::Mutex::VERSION)
+  test "version is set to expected value" do
+    assert_equal('0.4.1', Win32::Mutex::VERSION)
   end
 
   test "constructor with no arguments works as expected" do

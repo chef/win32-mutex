@@ -2,11 +2,11 @@ require 'rubygems'
 
 Gem::Specification.new do |spec|
   spec.name      = 'win32-mutex'
-  spec.version   = '0.4.0'
+  spec.version   = '0.4.1'
   spec.author    = 'Daniel J. Berger'
   spec.license   = 'Artistic 2.0'
   spec.email     = 'djberg96@gmail.com'
-  spec.homepage  = 'http://www.rubyforge.org/projects/win32utils'
+  spec.homepage  = 'https://github.com/djberg96/win32-mutex'
   spec.summary   = 'Interface to MS Windows Mutex objects.'
   spec.test_file = 'test/test_win32_mutex.rb'
   spec.files     = Dir['**/*'].reject{ |f| f.include?('git') }
