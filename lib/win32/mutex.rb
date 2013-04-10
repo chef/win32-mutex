@@ -5,21 +5,24 @@ module Win32
 
   # The Mutex class encapsulates Windows mutex objects.
   class Mutex < Ipc
+    typedef :ulong, :dword
+    typedef :uintptr_t, :handle
+
     ffi_lib :kernel32
 
     private
 
     class SecurityAttributes < FFI::Struct
       layout(
-        :nLength, :ulong,
+        :nLength, :dword,
         :lpSecurityDescriptor, :pointer,
         :bInheritHandle, :bool
       )
     end
 
-    attach_function :CreateMutexW, [:pointer, :bool, :buffer_in], :ulong
-    attach_function :OpenMutexW, [:ulong, :bool, :buffer_in], :ulong
-    attach_function :ReleaseMutex, [:ulong], :bool
+    attach_function :CreateMutexW, [:pointer, :bool, :buffer_in], :handle
+    attach_function :OpenMutexW, [:dword, :bool, :buffer_in], :handle
+    attach_function :ReleaseMutex, [:handle], :bool
 
     private_class_method :CreateMutexW, :OpenMutexW, :ReleaseMutex
 
@@ -29,7 +32,7 @@ module Win32
     public
 
     # The version of the win32-mutex library
-    VERSION = '0.4.0'
+    VERSION = '0.4.1'
 
     # The name of the mutex object.
     attr_reader :name
