@@ -26,13 +26,13 @@ module Win32
 
     private_class_method :CreateMutexW, :OpenMutexW, :ReleaseMutex
 
-    INVALID_HANDLE_VALUE = 0xFFFFFFFF
+    INVALID_HANDLE_VALUE = FFI::Pointer.new(-1).address
     MUTEX_ALL_ACCESS     = 0x1F0001
 
     public
 
     # The version of the win32-mutex library
-    VERSION = '0.4.1'
+    VERSION = '0.4.2'
 
     # The name of the mutex object.
     attr_reader :name
