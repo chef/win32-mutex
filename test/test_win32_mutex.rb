@@ -15,7 +15,7 @@ class TC_Win32_Mutex < Test::Unit::TestCase
   end
 
   test "version is set to expected value" do
-    assert_equal('0.4.1', Win32::Mutex::VERSION)
+    assert_equal('0.4.2', Win32::Mutex::VERSION)
   end
 
   test "constructor with no arguments works as expected" do
