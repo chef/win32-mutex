@@ -1,3 +1,7 @@
+== 0.4.2 - 21-Oct-2013
+* Fixed INVALID_HANDLE_VALUE constant for 64-bit Ruby.
+* Added Rake as a development dependency.
+
 == 0.4.1 - 10-Apr-2013
 * Fixed HANDLE type in underlying FFI code. This affects 64 bit versions
   of Ruby.
