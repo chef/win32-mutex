@@ -32,7 +32,7 @@ module Win32
     public
 
     # The version of the win32-mutex library
-    VERSION = '0.4.2'
+    VERSION = '0.4.3'
 
     # The name of the mutex object.
     attr_reader :name
