@@ -6,5 +6,6 @@
 * win32-mutex.gemspec
 * certs/djberg96_pub.pem
 * examples/mutex_test.rb
+* lib/win32-mutex.rb
 * lib/win32/mutex.rb
 * test/test_win32_mutex.rb

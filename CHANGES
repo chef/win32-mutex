@@ -1,5 +1,6 @@
 == 0.4.3 - 17-Nov-2015
 * This gem is now signed.
+* Added a win32-mutex.rb file for convenience.
 * All gem related tasks in the Rakefile now assume Rubygems 2.x.
 * The gemspec no longer sets rubyforge_project.
 * Added an appveyor.yml file for the MS continuous integration service.
