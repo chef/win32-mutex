@@ -10,7 +10,6 @@ Gem::Specification.new do |spec|
   spec.summary    = 'Interface to MS Windows Mutex objects.'
   spec.test_file  = 'test/test_win32_mutex.rb'
   spec.files      = Dir['**/*'].reject{ |f| f.include?('git') }
-  spec.cert_chain = Dir['certs/*']
 
   spec.extra_rdoc_files  = ['README.md', 'CHANGES', 'MANIFEST']
   spec.required_ruby_version = '> 1.9.0'
