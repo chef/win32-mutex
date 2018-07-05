@@ -1,24 +1,9 @@
+require "rubygems"
 require 'rake'
 require 'rake/testtask'
 require 'rake/clean'
 
 CLEAN.include("**/*.gem")
-
-namespace :gem do
-  desc 'Create the win32-mutex gem'
-  task :create => [:clean] do
-    require 'rubygems/package'
-    spec = eval(IO.read('win32-mutex.gemspec'))
-    spec.signing_key = File.join(Dir.home, '.ssh', 'gem-private_key.pem')
-    Gem::Package.build(spec, true)
-  end
-
-  desc 'Install the win32-mutex gem'
-  task :install => [:create] do
-    file = Dir["*.gem"].first
-    sh "gem install -l #{file}"
-  end
-end
 
 desc 'Run the example program'
 task :example do
