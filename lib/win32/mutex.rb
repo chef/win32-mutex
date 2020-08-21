@@ -1,4 +1,4 @@
-require 'win32/ipc'
+require "win32/ipc"
 
 # The Win32 module serves as a namespace only.
 module Win32
@@ -20,8 +20,8 @@ module Win32
       )
     end
 
-    attach_function :CreateMutexW, [:pointer, :bool, :buffer_in], :handle
-    attach_function :OpenMutexW, [:dword, :bool, :buffer_in], :handle
+    attach_function :CreateMutexW, %i{pointer bool buffer_in}, :handle
+    attach_function :OpenMutexW, %i{dword bool buffer_in}, :handle
     attach_function :ReleaseMutex, [:handle], :bool
 
     private_class_method :CreateMutexW, :OpenMutexW, :ReleaseMutex
@@ -32,7 +32,7 @@ module Win32
     public
 
     # The version of the win32-mutex library
-    VERSION = '0.4.3'
+    VERSION = "0.4.3".freeze
 
     # The name of the mutex object.
     attr_reader :name
@@ -52,7 +52,7 @@ module Win32
     # The +inherit+ attribute determines whether or not the mutex can
     # be inherited by child processes.
     #
-    def initialize(initial_owner=false, name=nil, inherit=true)
+    def initialize(initial_owner = false, name = nil, inherit = true)
       @initial_owner = initial_owner
       @name          = name
       @inherit       = inherit
@@ -65,9 +65,9 @@ module Win32
         sec = nil
       end
 
-      if name && name.encoding.to_s != 'UTF-16LE'
-        name = name + 0.chr
-        name.encode!('UTF-16LE')
+      if name && name.encoding.to_s != "UTF-16LE"
+        name += 0.chr
+        name.encode!("UTF-16LE")
       end
 
       handle = CreateMutexW(sec, initial_owner, name)
@@ -99,10 +99,10 @@ module Win32
     #
     # If you want "open or create" semantics, then use Mutex.new.
     #
-    def self.open(name, inherit=true, &block)
-      if name.encoding.to_s != 'UTF-16LE'
-        name = name + 0.chr
-        name.encode!('UTF-16LE')
+    def self.open(name, inherit = true, &block)
+      if name.encoding.to_s != "UTF-16LE"
+        name += 0.chr
+        name.encode!("UTF-16LE")
       end
 
       begin
@@ -117,7 +117,7 @@ module Win32
         CloseHandle(handle) if handle && handle > 0
       end
 
-      self.new(false, name, inherit, &block)
+      new(false, name, inherit, &block)
     end
 
     # Releases ownership of the mutex.
