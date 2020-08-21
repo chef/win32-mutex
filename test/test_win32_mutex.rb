@@ -1,26 +1,25 @@
-# encoding: utf-8
 #######################################################################
 # test_win32_mutex.rb
 #
 # Test suite for the win32-mutex library. This test suite should be
 # run via the 'rake test' task.
 #######################################################################
-require 'test-unit'
-require 'win32/mutex'
+require "test-unit"
+require "win32/mutex"
 
 class TC_Win32_Mutex < Test::Unit::TestCase
   def setup
-    @mutex  = Win32::Mutex.new(true, 'test')
-    @umutex = Win32::Mutex.new(false, 'Ηελλας')
+    @mutex  = Win32::Mutex.new(true, "test")
+    @umutex = Win32::Mutex.new(false, "Ηελλας")
   end
 
   test "version is set to expected value" do
-    assert_equal('0.4.3', Win32::Mutex::VERSION)
+    assert_equal("0.4.3", Win32::Mutex::VERSION)
   end
 
   test "constructor with no arguments works as expected" do
     mutex = nil
-    assert_nothing_raised{ mutex = Win32::Mutex.new }
+    assert_nothing_raised { mutex = Win32::Mutex.new }
     mutex.close
   end
 
@@ -34,17 +33,17 @@ class TC_Win32_Mutex < Test::Unit::TestCase
 
   test "open method works as expected" do
     assert_respond_to(Win32::Mutex, :open)
-    assert_nothing_raised{ Win32::Mutex.open('test'){} }
-    assert_nothing_raised{ Win32::Mutex.open('Ηελλας'){} }
+    assert_nothing_raised { Win32::Mutex.open("test") {} }
+    assert_nothing_raised { Win32::Mutex.open("Ηελλας") {} }
   end
 
   test "attempting to open an unknown mutex raises an error" do
-    assert_raise(Errno::ENOENT){ Win32::Mutex.open('bogus'){} }
+    assert_raise(Errno::ENOENT) { Win32::Mutex.open("bogus") {} }
   end
 
   test "release method works as expected" do
     assert_respond_to(@mutex, :release)
-    assert_nothing_raised{ @mutex.release }
+    assert_nothing_raised { @mutex.release }
   end
 
   test "initial_owner? works as expected and returns expected value" do
