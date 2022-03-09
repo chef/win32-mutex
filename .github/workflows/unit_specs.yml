@@ -1,5 +1,5 @@
 ---
-name: unit
+name: unit_specs
 
 'on':
   pull_request:
