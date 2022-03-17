@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name       = "win32-mutex"
-  spec.version    = "0.4.3"
+  spec.version    = Win32::Mutex::VERSION
   spec.author     = "Daniel J. Berger"
   spec.license    = "Artistic 2.0"
   spec.email      = "djberg96@gmail.com"
