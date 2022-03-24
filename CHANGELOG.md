@@ -1,9 +1,17 @@
 # win32-mutex Changelog
 
-<!-- latest_release -->
+<!-- latest_release 0.4.4 -->
+## [win32-mutex-0.4.4](https://github.com/chef/win32-mutex/tree/win32-mutex-0.4.4) (2022-03-24)
+
+#### Merged Pull Requests
+- Add workflow to test ruby 3.0/3.1 [#7](https://github.com/chef/win32-mutex/pull/7) ([poorndm](https://github.com/poorndm))
 <!-- latest_release -->
 
-<!-- release_rollup -->
+<!-- release_rollup since=0.4.3 -->
+### Changes not yet released to rubygems.org
+
+#### Merged Pull Requests
+- Add workflow to test ruby 3.0/3.1 [#7](https://github.com/chef/win32-mutex/pull/7) ([poorndm](https://github.com/poorndm)) <!-- 0.4.4 -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
