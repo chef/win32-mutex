@@ -1,7 +1,10 @@
+lib = File.expand_path("../lib", __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require "win32/mutex/version"
 
 Gem::Specification.new do |spec|
   spec.name       = "win32-mutex"
-  spec.version    = "0.4.4"
+  spec.version    = Win32::Mutex::VERSION
   spec.author     = "Daniel J. Berger"
   spec.license    = "Artistic 2.0"
   spec.email      = "djberg96@gmail.com"
