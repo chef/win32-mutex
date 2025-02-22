@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.files      = Dir["**/*"].reject { |f| f.include?("git") }
 
   spec.extra_rdoc_files = ["README.md", "CHANGES", "MANIFEST"]
-  spec.required_ruby_version = "> 3.1.6"
+  spec.required_ruby_version = ">= 3.1.6"
 
   spec.add_dependency("win32-ipc", ">= 0.6.0")
 
