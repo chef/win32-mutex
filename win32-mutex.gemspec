@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "win32-mutex"
-  spec.version       = "0.4.5"  # Fix: Hardcode version instead of using undefined constant
+  spec.version       = "0.4.5" # Fix: Hardcode version instead of using undefined constant
   spec.authors       = ["Daniel J. Berger"]
   spec.email         = ["djberg96@gmail.com"]
   spec.summary       = "Win32 Mutex implementation"
