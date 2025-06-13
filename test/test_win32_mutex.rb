@@ -5,7 +5,16 @@
 # run via the 'rake test' task.
 #######################################################################
 require "test-unit"
-require "win32/mutex"
+# Wrap the require in a begin/rescue block to catch loading errors
+begin
+  require "win32/mutex"
+  puts "Successfully loaded win32/mutex"
+  puts "Win32::Mutex superclass: #{Win32::Mutex.superclass}"
+  puts "Win32::Mutex ancestors: #{Win32::Mutex.ancestors}"
+rescue => e
+  puts "ERROR LOADING LIBRARY: #{e.class}: #{e.message}"
+  puts e.backtrace
+end
 
 class TC_Win32_Mutex < Test::Unit::TestCase
   def setup
