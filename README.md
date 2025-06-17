@@ -30,15 +30,15 @@ end
 
 The mutex.rb file contains inline RDoc documentation. If you installed this file as a gem, then you have the docs.
 
-For an example of win32-mutex in action, look at the example_win32_mutex.rb file in the 'examples' directory. You can also run the 'examples' rake task.
+For an example of win32-mutex in action, look at the `example_win32_mutex.rb` file in the `examples` directory. You can also run the `example` rake task.
 
 ## Notes
 
-The Mutex class is a subclass of Win32::Ipc (win32-ipc). This library require's the win32-ipc library internally. You don't need to explicitly call it.
+The Mutex class is a subclass of `Win32::Ipc` (`win32-ipc`). This library requires the `win32-ipc` library internally. You don't need to explicitly call it.
 
 ## Acknowledgements
 
-Originally adapted from the Win32::Mutex Perl module.
+Originally adapted from the `Win32::Mutex` Perl module.
 
 ## Known Bugs
 
