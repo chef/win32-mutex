@@ -1,16 +1,17 @@
 # win32-mutex Changelog
 
-<!-- latest_release 0.4.5 -->
-## [win32-mutex-0.4.5](https://github.com/chef/win32-mutex/tree/win32-mutex-0.4.5) (2022-04-08)
+<!-- latest_release 0.5.0 -->
+## [win32-mutex-0.5.0](https://github.com/chef/win32-mutex/tree/win32-mutex-0.5.0) (2025-06-17)
 
 #### Merged Pull Requests
-- Test - ruby 3.0/3.1 [#9](https://github.com/chef/win32-mutex/pull/9) ([poorndm](https://github.com/poorndm))
+- Adding Ruby 3.4 and Cookstyle support [#12](https://github.com/chef/win32-mutex/pull/12) ([johnmccrae](https://github.com/johnmccrae))
 <!-- latest_release -->
 
 <!-- release_rollup since=0.4.3 -->
 ### Changes not yet released to rubygems.org
 
 #### Merged Pull Requests
+- Adding Ruby 3.4 and Cookstyle support [#12](https://github.com/chef/win32-mutex/pull/12) ([johnmccrae](https://github.com/johnmccrae)) <!-- 0.5.0 -->
 - Test - ruby 3.0/3.1 [#9](https://github.com/chef/win32-mutex/pull/9) ([poorndm](https://github.com/poorndm)) <!-- 0.4.5 -->
 - Add workflow to test ruby 3.0/3.1 [#7](https://github.com/chef/win32-mutex/pull/7) ([poorndm](https://github.com/poorndm)) <!-- 0.4.4 -->
 <!-- release_rollup -->
