@@ -1,20 +1,20 @@
-lib = File.expand_path("../lib", __FILE__)
+lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "win32/mutex/version"
 
 Gem::Specification.new do |spec|
-  spec.name       = "win32-mutex"
-  spec.version    = Win32::Mutex::VERSION
-  spec.author     = "Daniel J. Berger"
-  spec.license    = "Artistic 2.0"
-  spec.email      = "djberg96@gmail.com"
-  spec.homepage   = "https://github.com/chef/win32-mutex"
-  spec.summary    = "Interface to MS Windows Mutex objects."
-  spec.test_file  = "test/test_win32_mutex.rb"
-  spec.files      = Dir["**/*"].reject { |f| f.include?("git") }
+  spec.name          = "win32-mutex"
+  spec.version       = "0.4.5" # Fix: Hardcode version instead of using undefined constant
+  spec.authors       = ["Daniel J. Berger"]
+  spec.email         = ["djberg96@gmail.com"]
+  spec.summary       = "Win32 Mutex implementation"
+  spec.description   = "A Ruby library providing mutex functionality for Windows"
+  spec.homepage      = "https://github.com/chef/win32-mutex"
+  spec.license       = "Artistic 2.0"
 
-  spec.extra_rdoc_files = ["README.md", "CHANGES", "MANIFEST"]
-  spec.required_ruby_version = "> 1.9.0"
+  spec.files         = Dir.glob("{bin,lib}/**/*") + %w{README.md CHANGES MANIFEST}
+  spec.require_paths = ["lib"]
+
+  spec.required_ruby_version = "~> 3.1"
 
   spec.add_dependency("win32-ipc", ">= 0.6.0")
 
