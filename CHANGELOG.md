@@ -1,16 +1,17 @@
 # win32-mutex Changelog
 
-<!-- latest_release 0.5.2 -->
-## [win32-mutex-0.5.2](https://github.com/chef/win32-mutex/tree/win32-mutex-0.5.2) (2025-09-22)
+<!-- latest_release 0.5.3 -->
+## [win32-mutex-0.5.3](https://github.com/chef/win32-mutex/tree/win32-mutex-0.5.3) (2025-11-14)
 
 #### Merged Pull Requests
-- Add GitHub Security Actions Workflow [#14](https://github.com/chef/win32-mutex/pull/14) ([sean-sype-simmons](https://github.com/sean-sype-simmons))
+- set up ai assisted development workflow [#17](https://github.com/chef/win32-mutex/pull/17) ([rishichawda](https://github.com/rishichawda))
 <!-- latest_release -->
 
 <!-- release_rollup since=0.4.3 -->
 ### Changes not yet released to rubygems.org
 
 #### Merged Pull Requests
+- set up ai assisted development workflow [#17](https://github.com/chef/win32-mutex/pull/17) ([rishichawda](https://github.com/rishichawda)) <!-- 0.5.3 -->
 - Add GitHub Security Actions Workflow [#14](https://github.com/chef/win32-mutex/pull/14) ([sean-sype-simmons](https://github.com/sean-sype-simmons)) <!-- 0.5.2 -->
 - Format and spelling [#13](https://github.com/chef/win32-mutex/pull/13) ([tpowell-progress](https://github.com/tpowell-progress)) <!-- 0.5.1 -->
 - Adding Ruby 3.4 and Cookstyle support [#12](https://github.com/chef/win32-mutex/pull/12) ([johnmccrae](https://github.com/johnmccrae)) <!-- 0.5.0 -->
