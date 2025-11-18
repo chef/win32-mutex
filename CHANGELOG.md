@@ -1,16 +1,17 @@
 # win32-mutex Changelog
 
-<!-- latest_release 0.5.3 -->
-## [win32-mutex-0.5.3](https://github.com/chef/win32-mutex/tree/win32-mutex-0.5.3) (2025-11-14)
+<!-- latest_release 0.5.4 -->
+## [win32-mutex-0.5.4](https://github.com/chef/win32-mutex/tree/win32-mutex-0.5.4) (2025-11-18)
 
 #### Merged Pull Requests
-- set up ai assisted development workflow [#17](https://github.com/chef/win32-mutex/pull/17) ([rishichawda](https://github.com/rishichawda))
+- Update copilot instructions with AI compliance workflow [#18](https://github.com/chef/win32-mutex/pull/18) ([rishichawda](https://github.com/rishichawda))
 <!-- latest_release -->
 
 <!-- release_rollup since=0.4.3 -->
 ### Changes not yet released to rubygems.org
 
 #### Merged Pull Requests
+- Update copilot instructions with AI compliance workflow [#18](https://github.com/chef/win32-mutex/pull/18) ([rishichawda](https://github.com/rishichawda)) <!-- 0.5.4 -->
 - set up ai assisted development workflow [#17](https://github.com/chef/win32-mutex/pull/17) ([rishichawda](https://github.com/rishichawda)) <!-- 0.5.3 -->
 - Add GitHub Security Actions Workflow [#14](https://github.com/chef/win32-mutex/pull/14) ([sean-sype-simmons](https://github.com/sean-sype-simmons)) <!-- 0.5.2 -->
 - Format and spelling [#13](https://github.com/chef/win32-mutex/pull/13) ([tpowell-progress](https://github.com/tpowell-progress)) <!-- 0.5.1 -->
